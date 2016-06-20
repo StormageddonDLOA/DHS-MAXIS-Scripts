@@ -1,5 +1,5 @@
 'Required for statistical purposes==========================================================================================
-name_of_script = "ACTIONS - ACCT PANEL UPDATER.vbs"
+name_of_script = "ACCT PANEL UPDATER.vbs"
 start_time = timer
 STATS_counter = 1              'sets the stats counter at 0 because each iteration of the loop which counts the dail messages adds 1 to the counter.  
 STATS_manualtime = 60          'manual run time in seconds
@@ -228,8 +228,6 @@ call check_for_MAXIS(true)
 	LOOP UNTIL err_msg = ""
 
 	EMWriteScreen "nn", 20, 79
-	'checking to see if a new panel has been created
-	Needs_new_check = TRUE  							
 	transmit	
 
 	'Enters the ACCT type.
@@ -280,7 +278,6 @@ call check_for_MAXIS(true)
 	EMWriteScreen "stat", 16, 43
 	EMWriteScreen "acct", 21, 70							
 	EMWriteScreen MEMB_num, 21, 75
-msgbox "hi"	
 	transmit
 
 
